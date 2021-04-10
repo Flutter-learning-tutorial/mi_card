@@ -34,6 +34,13 @@ class MICardApp extends StatelessWidget {
                       fontSize: 20,
                       color: Colors.teal[200],
                       letterSpacing: 6)),
+              SizedBox(
+                height: 10.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal[100],
+                ),
+              ),
               getIconWithText("+65 86264128", Icons.phone),
               getIconWithText("pingtosudhakar@gmail.com", Icons.email),
             ],
@@ -45,7 +52,6 @@ class MICardApp extends StatelessWidget {
 
   Card getIconWithText(String text, IconData icon) {
     return Card(
-      color: Colors.white,
       margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       child: ListTile(
         leading: Icon(
@@ -54,7 +60,10 @@ class MICardApp extends StatelessWidget {
         ),
         title: Text(
           text,
-          style: TextStyle(fontFamily: "SourceSansPro", fontSize: 20),
+          style: TextStyle(
+              fontFamily: "SourceSansPro",
+              fontSize: 20,
+              color: Colors.teal[800]),
         ),
       ),
     );
