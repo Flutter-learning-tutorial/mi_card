@@ -30,8 +30,7 @@ class MICardApp extends StatelessWidget {
                       fontSize: 40)),
               Text("Mobile Engineer",
                   style: TextStyle(
-                      fontFamily: "SourceSansPro",
-                      fontWeight: FontWeight.bold,
+                      fontFamily: "SourceSansPro-Bold",
                       fontSize: 20,
                       color: Colors.teal[200],
                       letterSpacing: 6)),
@@ -44,20 +43,19 @@ class MICardApp extends StatelessWidget {
     );
   }
 
-  Container getIconWithText(String text, IconData icon) {
-    return Container(
+  Card getIconWithText(String text, IconData icon) {
+    return Card(
       color: Colors.white,
-      padding: EdgeInsets.all(10),
       margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-      child: Row(
-        children: [
-          Icon(icon),
-          SizedBox(width: 20),
-          Text(
-            text,
-            style: TextStyle(fontFamily: "SourceSansPro", fontSize: 20),
-          )
-        ],
+      child: ListTile(
+        leading: Icon(
+          icon,
+          color: Colors.teal,
+        ),
+        title: Text(
+          text,
+          style: TextStyle(fontFamily: "SourceSansPro", fontSize: 20),
+        ),
       ),
     );
   }
